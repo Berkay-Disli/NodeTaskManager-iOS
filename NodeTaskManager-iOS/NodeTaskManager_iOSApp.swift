@@ -9,9 +9,19 @@ import SwiftUI
 
 @main
 struct NodeTaskManager_iOSApp: App {
+    @StateObject private var userManager = UserManager()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if userManager.isLoggedIn {
+                MainTabBarView()
+                    .environmentObject(userManager)
+                    .transition(.opacity.animation(.easeInOut))
+            } else {
+                RegisterView()
+                    .environmentObject(userManager)
+                    .transition(.opacity.animation(.easeInOut))
+            }
         }
     }
 }

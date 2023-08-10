@@ -16,5 +16,5 @@ enum Constants {
     static let CURRENT_USER_URL_PATH = "users/current"
     
     // Tasks
-    static let GET_ALL_TASKS_URL_PATH = "tasks/"
+    static let MAIN_TASKS_URL_PATH = "tasks/"
 }

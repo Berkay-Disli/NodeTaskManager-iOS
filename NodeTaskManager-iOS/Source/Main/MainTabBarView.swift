@@ -9,8 +9,6 @@ import SwiftUI
 
 struct MainTabBarView: View {
     @State private var selection: Int = 1
-    // this is a test line
-    // this is a second test line
     var body: some View {
         TabView(selection: $selection,
                 content:  {
